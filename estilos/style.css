@@ -1,70 +1,44 @@
 @charset "UTF-8";
 
-body, html{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-form.login-form{
+body,html{
     background-color: black;
-    height: 100vh;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;   
-    gap: 10px;
+    justify-content: space-around;
 }
 
-form div.login-header{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-}
-
-form div.login-header img{
-    width: 200px;
-    /*border-radius: 50%;*/
-}
-
-form div.login-header h1{
-    color: ghostwhite;
+main h1{
     text-align: center;
-    margin-bottom: 10px;
+    color: aliceblue;
+    padding: 20px 0px;
 
 }
 
-form.login-form input.login-input{
-    font-size: 1em;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    outline: none;
+main > section.display{
+    margin: auto;
+    border: 1px solid rgb(133, 100, 17);
+    border-radius: 10px;
+    width: 90%;
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-form.login-form button.login-button{
-    background-color: rgb(237, 185, 54);
-    color: black;
-    width: 200px;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+main > section.display img {
     
+    width: 100px;
+    height: 100px;
 }
 
-form.login-form button.login-button:disabled{
-    background-color: gainsboro;
-    color: rgb(150, 150, 150);
-    cursor: auto;
+p a {
+    background-color: dimgray;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
 }
-
-
-
-
-
-
-
