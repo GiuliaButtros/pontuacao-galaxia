@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/reset.css">
     <link rel="stylesheet" href="../estilos/style.css">
+    <script src="../JavaScript/pontuacao.js" defer></script>
     <title>Pontuação Galáxias</title>
 </head>
 <body>
@@ -15,8 +16,25 @@
             <img src="../imagens/Custo-Man-Christmas-Globe-Internet.256.png" alt="Planeta Terra">
             
         </section>
+
+        <button id="open-modal">Adicionar corpo celeste</button>
+
+        <div id="fade" class="hide"></div>
+
+        <section id="modal" class="hide">
+            <div class="modal-header">
+                <h2>Selecione um corpo seleste</h2>
+                <button id="close-modal">Fechar</button>
+            </div>
+
+            <div class="modal-body">
+                <img src="../imagens/Harwen-Weather-Sun.128.png" alt="imagem Sol" id="sun">
+
+                <img src="../imagens/Harwen-Weather-Moon.128.png" alt="imagem Lua" id="moon">
+            </div>
+        </section>
     </main>
 
-    <p><a href="../login.html">Voltar ao login</a></p>
+    <p><a href="../login.html" rel="prev">Voltar ao login</a></p>
 </body>
 </html>
