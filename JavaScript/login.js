@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
 
     localStorage.setItem('aluno', input.value); // salva a chave 'aluno' + o que o usuário digitar no input
 
-    window.location = 'pages/pontuacao.html'   // após o submit o usuário será encaminhado para a próxima página
+    window.location = 'pages/galaxia.html'   // após o submit o usuário será encaminhado para a próxima página
 
 }
 

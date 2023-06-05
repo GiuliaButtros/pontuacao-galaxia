@@ -83,8 +83,15 @@ main section#modal{ /* fica na frente do fade */
 
 }
 
+#fade, #modal{ /* os eventos funcionam quando a opacidade for 1 */
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
 #modal.hide, #fade.hide{
     opacity: 0; /* com a opacidade é possível controlar a transição do elemento, com display:none não */
+    pointer-events: none;
 }
 
 main section#modal div.modal-header{
