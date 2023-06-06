@@ -52,7 +52,6 @@ main > section.display{
 }
 
 main > section.display img {
-    
     width: 100px;
     height: 100px;
 }
@@ -125,6 +124,10 @@ main section#modal div.modal-header{
 main section#modal div.modal-body{
     display: flex;
     align-items: center;
+}
+
+main section#modal div.modal-body button{
+    user-select: none; /* botão será pressionado, não selecoinado*/
 }
 
 #moon{
