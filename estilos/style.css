@@ -52,8 +52,9 @@ main > section.display{
 }
 
 main > section.display img {
-    width: 100px;
-    height: 100px;
+    position: relative;
+    width: 80px;
+    height: 80px;
 }
 
 main button#open-modal{   
@@ -126,13 +127,37 @@ main section#modal div.modal-body{
     align-items: center;
 }
 
-main section#modal div.modal-body button{
-    user-select: none; /* botão será pressionado, não selecoinado*/
+main section#modal div.modal-body div.bodies{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/*main section#modal div.modal-body button{
+    user-select: none; /* botão será pressionado, não selecoinado
+}*/
+
+#sun{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../imagens/Harwen-Weather-Sun.128.png);
+    height: 150px;
+    width: 150px;
 }
 
 #moon{
-    width: 100px;
-    height: 100px;
+    background-image: url(../imagens/Harwen-Weather-Moon.128.png);
+    width: 90px;
+    height: 90px;
+}
+
+.hovered{
+    box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.484);
+}
+
+.invisible{
+    display: none;
 }
 
 p a{
