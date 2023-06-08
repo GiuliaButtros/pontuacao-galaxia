@@ -134,10 +134,6 @@ main section#modal div.modal-body div.bodies{
     cursor: pointer;
 }
 
-/*main section#modal div.modal-body button{
-    user-select: none; /* botão será pressionado, não selecoinado
-}*/
-
 #sun{
     background-size: contain;
     background-repeat: no-repeat;

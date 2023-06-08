@@ -16,7 +16,8 @@ const toggleModal = () => {
 }
 
 const bodies = document.querySelector('.bodies').cloneNode(true); 
-// assim só seleciona o primeiro filho, mas quando usa querySelectorAll, aparece erro nas funções dragStart e dragEnd
+// assim só seleciona o primeiro filho, mas quando usa 
+// tentar querySelectorAll
 
 const display = document.querySelector('.display');
 
