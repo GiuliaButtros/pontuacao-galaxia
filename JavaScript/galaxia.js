@@ -39,7 +39,7 @@ display.addEventListener('drop', dragDrop);
 // Drag & Drop functions
 
 function dragStart(){
-    console.log('start'); // quando gragStart a div fade some??
+    console.log('start');
 }
 
 function dragEnd() {
