@@ -45,24 +45,27 @@ function dragStart(){
 
 function dragEnd() {
     this.className = 'bodies';
-    
+    console.log('end');
 }
 
 function dragOver(e) {
     e.preventDefault();
-    
+    console.log('over');
 }
 
 function dragEnter(e) {
     e.preventDefault();
-    this.className += ' hovered'    
+    this.className += ' hovered'
+    console.log('enter')  ;  
 }
 
 function dragLeave() {
     this.className = 'display'
+    console.log('leave');
 }
 
 function dragDrop() {
     this.className = 'display'
     this.append(bodies);
+    console.log('drop');
 }
