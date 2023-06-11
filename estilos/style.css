@@ -49,6 +49,7 @@ main > section.display{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 main > section.display img {
@@ -125,27 +126,53 @@ main section#modal div.modal-header{
 main section#modal div.modal-body{
     display: flex;
     align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-main section#modal div.modal-body div.bodies{
-    background-position: center;
+main section#modal div.modal-body .bodies-and-label{
+    padding: 3px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+main section#modal div.modal-body .bodies-and-label:hover{
+    
+    border: 1px solid rgb(133, 100, 17);
+    border-radius: 10px;
+}
+
+main section#modal div.modal-body label{
+    color: aliceblue;
+    padding-bottom: 5px;
+}
+
+main section#modal div.modal-body img.bodies{
+    /*background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     cursor: pointer;
 }
 
 #sun{
-    background-size: contain;
+    /*background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(../imagens/Harwen-Weather-Sun.128.png);
+    background-image: url(../imagens/Harwen-Weather-Sun.128.png);*/
     height: 150px;
     width: 150px;
 }
 
-#moon{
-    background-image: url(../imagens/Harwen-Weather-Moon.128.png);
+#moon, #jupiter{
+    /*background-image: url(../imagens/Harwen-Weather-Moon.128.png);*/
     width: 90px;
     height: 90px;
+}
+
+#saturn {
+    width: 110px;
+    height: 110px;
 }
 
 .hovered{
