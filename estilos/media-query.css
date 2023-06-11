@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* 
+Typical Device Breakpoints 
+
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: 992px até 1920px
+Grandes telas: acima de 1920px
+*/
+
+@media screen and (min-width: 670px) and (max-width: 992px){
+    main section#modal{
+        width: 70%;
+    }
+
+    #sun{
+        height: 150px;
+        width: 150px;
+    }
+
+    #moon, #jupiter{
+        width: 90px;
+        height: 90px;
+    }
+    
+    #saturn {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    main section#modal{
+        width: 60%;
+    }
+
+    #sun{
+        height: 150px;
+        width: 150px;
+    }
+
+    #moon, #jupiter{
+        width: 90px;
+        height: 90px;
+    }
+    
+    #saturn {
+        width: 110px;
+        height: 110px;
+    }
+}
