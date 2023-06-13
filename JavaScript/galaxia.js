@@ -15,11 +15,11 @@ const toggleModal = () => {
     */
 }
 
-const bodies = document.querySelector('.bodies').cloneNode(true); 
-// assim só seleciona o primeiro filho, mas quando usa 
-// tentar querySelectorAll
+let bodies = document.querySelectorAll('.bodies'); 
 
-const display = document.querySelector('.display');
+let display = document.querySelector('.display');
+
+let cloneBodies = [ ];
 
 //evento padrão em vários elementos:
 
@@ -29,13 +29,21 @@ const display = document.querySelector('.display');
 
 //Drag & Drop 
 
-bodies.addEventListener('dragstart', dragStart);
-bodies.addEventListener('dragend', dragEnd);
+//loop
+for(const body of bodies){ // Object.keys(bodies)?
+    body.addEventListener('dragstart', dragStart);
+    body.addEventListener('dragend', dragEnd);
+    cloneBodies.push(body.cloneNode(true));
+    
+}
 
-display.addEventListener('dragover', dragOver); // MUDAR FADE PARA DISPLAY
+//display
+display.addEventListener('dragover', dragOver);
 display.addEventListener('dragenter', dragEnter);
 display.addEventListener('dragleave', dragLeave);
 display.addEventListener('drop', dragDrop);
+
+display.appendChild(cloneBodies);
 
 // Drag & Drop functions
 
@@ -67,5 +75,6 @@ function dragLeave() {
 function dragDrop() {
     this.className = 'display'
     this.append(bodies);
+    
     console.log('drop');
 }
