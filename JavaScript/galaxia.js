@@ -4,22 +4,26 @@ const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
 const toggleModal = () => {
     modal.classList.toggle("hide"); // toggle: A classe está, ela é removida / a classe não está, ela é adicionada
-    /*fade.classList.toggle("hide");*/
 
     /*
     resumo do array:
     const toggleModal = () => {
     [modal,fade].forEach((el) => el.classList.toggle("hide"));  
-
     }
     */
+    
+    /*fade.classList.toggle("hide");*/ // fade removido por enquanto pois estava entrando na fente do display e atrapalhando o drag&drop
+
+    
 }
 
 let bodies = document.querySelectorAll('.bodies'); 
+/*let body = document.getElementById('id');*/
 
 let display = document.querySelector('.display');
 
 let cloneBodies = [ ];
+
 
 //evento padrão em vários elementos:
 
@@ -27,15 +31,25 @@ let cloneBodies = [ ];
     el.addEventListener("click", () => toggleModal());
 })
 
+
 //Drag & Drop 
 
+for (let index = 0; index < bodies.length; index++) { // para ver se ao clicar em cada item eles são slecionados individualmente - OK
+    bodies[index].onclick = ({target}) => {
+        const body = target.getAttribute("data-key");
+        console.log(body);
+    }
+}
+
 //loop
-for(const body of bodies){ // Object.keys(bodies)?
+bodies.forEach(body => { // Object.keys(bodies)?
     body.addEventListener('dragstart', dragStart);
     body.addEventListener('dragend', dragEnd);
-    cloneBodies.push(body.cloneNode(true));
+    cloneBodies.push(body.cloneNode(true)); //para clonae
+
     
-}
+});
+
 
 //display
 display.addEventListener('dragover', dragOver);
@@ -43,7 +57,6 @@ display.addEventListener('dragenter', dragEnter);
 display.addEventListener('dragleave', dragLeave);
 display.addEventListener('drop', dragDrop);
 
-display.appendChild(cloneBodies);
 
 // Drag & Drop functions
 
@@ -74,7 +87,10 @@ function dragLeave() {
 
 function dragDrop() {
     this.className = 'display'
-    this.append(bodies);
-    
+    for (const body of cloneBodies){
+        display.appendChild(body); // está colando TODOS os objetos .bodies ao invés de só o que está sendo arrastado
+        console.log(body);
+    }
+
     console.log('drop');
 }
