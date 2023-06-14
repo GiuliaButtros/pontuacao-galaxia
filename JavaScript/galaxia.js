@@ -60,7 +60,14 @@ display.addEventListener('drop', dragDrop);
 
 // Drag & Drop functions
 
-function dragStart(){
+function dragStart(event){
+    const dataKey = event.target.getAttribute('data-key');
+    const label = event.target.parentElement.querySelector('label');
+    const labelText = label.textContent;
+
+    event.dataTransfer.setData('text/plain', dataKey);
+    label.textContent = '';
+
     console.log('start');
 }
 
@@ -85,12 +92,21 @@ function dragLeave() {
     console.log('leave');
 }
 
-function dragDrop() {
-    this.className = 'display'
-    for (const body of cloneBodies){
+function dragDrop(event) {
+    event.preventDefault();
+    const selectedKey = event.dataTransfer.getData('text/plain');
+    const selectedBody = document.querySelector(`.bodies[data-key="${selectedKey}"]`);
+    if (selectedBody) {
+        display.appendChild(selectedBody);
+    }
+
+
+    /*this.className = 'display';
+    /*for (const body of cloneBodies){
         display.appendChild(body); // está colando TODOS os objetos .bodies ao invés de só o que está sendo arrastado
         console.log(body);
     }
+    this.appendChild(event.target);*/
 
     console.log('drop');
 }
