@@ -93,6 +93,7 @@ function dragLeave() {
 }
 
 function dragDrop(event) {
+    this.className = 'display'
     event.preventDefault();
     const selectedKey = event.dataTransfer.getData('text/plain');
     const selectedBody = document.querySelector(`.bodies[data-key="${selectedKey}"]`);

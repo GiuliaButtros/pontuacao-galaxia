@@ -162,8 +162,8 @@ main section#modal div.modal-body img.bodies{
     /*background-size: contain;
     background-repeat: no-repeat;
     background-image: url(../imagens/Harwen-Weather-Sun.128.png);*/
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
 }
 
 #moon, #jupiter{
