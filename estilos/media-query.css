@@ -38,6 +38,11 @@ Grandes telas: acima de 1920px
 }
 
 @media screen and (min-width: 992px){
+    main > section.display img {
+        width: 80px;
+        height: 80px;
+    }
+    
     main section#modal{
         width: 60%;
     }
