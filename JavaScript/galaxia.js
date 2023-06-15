@@ -25,6 +25,7 @@ let display = document.querySelector('.display');
 let cloneBodies = [ ];
 
 
+
 //evento padrão em vários elementos:
 
 [openModalButton, closeModalButton /*, fade*/].forEach((el) => {
@@ -59,6 +60,11 @@ display.addEventListener('drop', dragDrop);
 
 
 // Drag & Drop functions
+
+function updateNome(newText){
+    document.getElementById("nome-aluno").textContent = newText;
+    
+}
 
 function dragStart(event){
     const dataKey = event.target.getAttribute('data-key');

@@ -17,3 +17,10 @@ https://giuliabuttros.github.io/pontuacao-galaxia/login.html
 [X] JavaScript página principal;
 [X] -- Declaração, eventos e funções janela modal;
 [X] -- Declaração, eventos e funções drag and drop;
+[X] Responsividade;
+[X] Possibilidade de arrastar os outros objetos;
+[ ] Fazer o título "Universo do (aluno)" substituir (aluno) pelo nome inserido na tela de login;
+[ ] Fazer os objetos serem copiados e colados na tela, ao invés de transferidos;
+[ ] Possibilidade de inserir mais de um do mesmo objeto na tela;
+[ ] Possibilidade de remoção de objetos da tela; 
+
