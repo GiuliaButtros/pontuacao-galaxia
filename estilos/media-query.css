@@ -42,7 +42,7 @@ Grandes telas: acima de 1920px
         width: 80px;
         height: 80px;
     }
-    
+
     main section#modal{
         width: 60%;
     }
@@ -53,8 +53,8 @@ Grandes telas: acima de 1920px
     }
 
     #moon, #jupiter{
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
     
     #saturn {
