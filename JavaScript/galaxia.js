@@ -13,8 +13,6 @@ const toggleModal = () => {
     */
     
     /*fade.classList.toggle("hide");*/ // fade removido por enquanto pois estava entrando na fente do display e atrapalhando o drag&drop
-
-    
 }
 
 let bodies = document.querySelectorAll('.bodies'); 
@@ -24,23 +22,30 @@ let display = document.querySelector('.display');
 
 let cloneBodies = [ ];
 
-
-
 //evento padrão em vários elementos:
+
+document.addEventListener('DOMContentLoaded', function(){
+    let nomeAluno = localStorage.getItem('nomeAluno'); // recupera o input do localStorage
+
+    if (nomeAluno){
+        document.getElementById('nome-aluno').textContent = nomeAluno;
+    } else {
+        window.location.href = 'login.html'; // redireciona para a página de login se o nome não for válido
+    }
+});
 
 [openModalButton, closeModalButton /*, fade*/].forEach((el) => {
     el.addEventListener("click", () => toggleModal());
 })
 
-
 //Drag & Drop 
 
-for (let index = 0; index < bodies.length; index++) { // para ver se ao clicar em cada item eles são slecionados individualmente - OK
+/*for (let index = 0; index < bodies.length; index++) { // para ver se ao clicar em cada item eles são slecionados individualmente - OK
     bodies[index].onclick = ({target}) => {
         const body = target.getAttribute("data-key");
         console.log(body);
     }
-}
+}*/
 
 //loop
 bodies.forEach(body => { // Object.keys(bodies)?
@@ -48,9 +53,7 @@ bodies.forEach(body => { // Object.keys(bodies)?
     body.addEventListener('dragend', dragEnd);
     cloneBodies.push(body.cloneNode(true)); //para clonae
 
-    
 });
-
 
 //display
 display.addEventListener('dragover', dragOver);
@@ -61,10 +64,10 @@ display.addEventListener('drop', dragDrop);
 
 // Drag & Drop functions
 
-function updateNome(newText){
-    document.getElementById("nome-aluno").textContent = newText;
-    
-}
+/*function updateNome(){
+    document.getElementById('nome-aluno').innerHTML=localStorage.aluno;
+
+}*/
 
 function dragStart(event){
     const dataKey = event.target.getAttribute('data-key');

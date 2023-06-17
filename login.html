@@ -18,8 +18,10 @@
             <h1>Título</h1>
         </div>
 
-        <input type="text" placeholder="Nome do aluno" class="login-input" required oninput="updateNome(this.value)">
-        <button type="submit" class="login-button" disabled>Entrar</button>
+        <form id="login-form">
+            <input type="text" placeholder="Nome do aluno" class="login-input" id="nome-login" required > <!-- oninput="updateNome(/*this.value*/)"-->
+            <button type="submit" class="login-button" disabled>Entrar</button>
+        </form>
 
     </form>
     
