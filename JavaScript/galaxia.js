@@ -25,7 +25,7 @@ let cloneBodies = [ ];
 //evento padrão em vários elementos:
 
 document.addEventListener('DOMContentLoaded', function(){
-    let nomeAluno = localStorage.getItem('nomeAluno'); // recupera o input do localStorage
+    let nomeAluno = localStorage.getItem('aluno'); // recupera o input do localStorage
 
     if (nomeAluno){
         document.getElementById('nome-aluno').textContent = nomeAluno;
