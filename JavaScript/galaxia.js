@@ -88,6 +88,7 @@ function dragEnd() {
 function dragOver(e) {
     e.preventDefault();
     console.log('over');
+    this.className += ' trash-hover';
 }
 
 function dragEnter(e) {
@@ -108,7 +109,7 @@ function dragDrop(event) {
     const selectedBody = document.querySelector(`.bodies[data-key="${selectedKey}"]`);
     if (selectedBody) {
         display.appendChild(selectedBody);
-    }
+    };
 
 
     /*this.className = 'display';

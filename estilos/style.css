@@ -59,6 +59,32 @@ main > section.display img {
     transition: width .4s, height .4s;
 }
 
+/*main > section.display div#trash{
+    width: fit-content;
+    height: fit-content;
+    
+}*/
+
+main > section.display img#trash{
+    height: 30px;
+    width: 30px;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 0;
+    /*border: 1px solid red;*/
+    left: 50%;
+    top: 87%;
+    transform: translate(-50%, -60%);
+}
+
+main > section.display img#trash:hover{
+    opacity: 1;
+}
+
+.trash-hover:hover{
+    opacity: 1;
+}
+
 main button#open-modal{   
     background-color: rgb(237, 185, 54);
     color: black;
